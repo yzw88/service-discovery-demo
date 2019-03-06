@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: consul-service-discovery-client
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        #注册在consul上面的名字，在consul的调用中，是通过此名字调用的
+        service-name: consul-client
+        #健康检查，保证服务处于启动状态，建议开启
+        register-health-check: true
+        #配置启动是否注册服务
+        register: true
+        #配置Consul健康检查频率，也就是心跳频率
+        health-check-interval: 10s
+        #配置Consul健康检查地址
+        health-check-path: /health
+        #配置Consul注册服务的Tags
+        tags: urlprefix-/${spring.application.name}
+server:
+  port: 8703

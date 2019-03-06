@@ -1,0 +1,15 @@
+eureka-service-discovery-server
+     http://localhost:8288/
+
+eureka-service-discovery-client
+    8705
+
+eureka-service-discovery-client-01
+    8706
+
+consul-service-discovery-client
+    8704
+    https://www.cnblogs.com/scode2/p/8671223.html
+
+consul-service-discovery-client-01
+    8703

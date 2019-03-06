@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: eureka-service-discovery-client
+server:
+  port: 8706
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8288/eureka/
